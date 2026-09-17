@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Set-2026 às 14:33
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- Tempo de geração: 17/09/2026 às 15:24
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,7 +26,7 @@ USE `biblioteca_db`;
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `livros`
+-- Estrutura para tabela `livros`
 --
 
 CREATE TABLE `livros` (
@@ -35,10 +35,10 @@ CREATE TABLE `livros` (
   `autor` varchar(120) NOT NULL,
   `ano_publicacao` int(11) NOT NULL,
   `disponivel` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `livros`
+-- Despejando dados para a tabela `livros`
 --
 
 INSERT INTO `livros` (`id`, `titulo`, `autor`, `ano_publicacao`, `disponivel`) VALUES
@@ -49,21 +49,21 @@ INSERT INTO `livros` (`id`, `titulo`, `autor`, `ano_publicacao`, `disponivel`) V
 --
 
 --
--- Índices para tabela `livros`
+-- Índices de tabela `livros`
 --
 ALTER TABLE `livros`
   ADD PRIMARY KEY (`id`),
   ADD KEY `ix_livros_id` (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
